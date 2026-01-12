@@ -1,0 +1,65 @@
+<p>pipes-demo works!</p>
+
+<div>
+  <h3>Date Pipe</h3>
+  Today's date: {{ presentDate | date }}
+</div>
+
+<div>
+  <h3>Parameters in Date Pipe</h3>
+  This is a short date: {{ presentDate | date:'shortDate' }} <br>
+  This line shows the full date: {{ presentDate | date:'fullDate' }} <br>
+  This will show a formatted date: {{ presentDate | date:'M/dd/yyyy'}} <br>
+  This indicates the hours and minutes: {{ presentDate | date:'h:mm'}}<br>
+  {{ fullName }}
+</div>
+
+<div>
+  <h3>Chained Pipes</h3>
+  Date with uppercase: {{ presentDate | date:'fullDate' | uppercase }} <br>
+  Date with lowercase: {{ presentDate | date:'medium' | lowercase }} <br>
+  Hello, {{ fullName | uppercase }} <br>
+</div>
+
+<div>
+  <h3>Currency Pipe</h3>
+  {{ price | currency:'':true }} <br>
+  {{ price | currency:'INR' }} <br>
+</div>
+
+<div>
+  <h3>Slice Pipe</h3>
+  Start index: {{ fruits | slice: 2 }} <br>
+  Star and end index: {{ fruits | slice: 1 : 4 }} <br>
+  Negative index: {{ fruits | slice: -2 }} <br>
+  Negative start and end index: {{ fruits | slice: -4 : -2 }} <br>
+</div>
+
+<div>
+  <h3>Decimal Pipe</h3>
+  {{ decimalNum1 | number }} <br>
+  {{ decimalNum2 | number }} <br>
+</div>
+
+<div>
+  <h3>Percent Pipe</h3>
+  {{ decimalNum3 | percent }} <br>
+  {{ decimalNum4 | percent }} <br>
+</div>
+
+<div>
+  <h3>Title Case Pipe</h3>
+  Without title case pipe: {{ sentence }} <br>
+  With title case pipe: {{ sentence | titlecase }} <br>
+</div>
+
+<div>
+  <h3>Json Pipe</h3>
+  Without JSON pipe: <br>
+  <pre>{{ object }}</pre> <br>
+  With JSON pipe: <br>
+  <pre>{{ object | json }}</pre> <br>
+</div>
+
+
+
