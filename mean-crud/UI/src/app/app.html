@@ -1,0 +1,28 @@
+<div class="container">
+<p>Books Application</p>
+
+<input id="newBook" placeholder="Title">
+<input id="newAuthor" placeholder="Author">
+<input id="newGenre" placeholder="Genre">
+<input id="newDesc" placeholder="Description">
+<input id="newPrice" placeholder="Book Price">
+
+<button (click)="addBook()">Add Book</button>
+
+@for (book of books; track book.id) {
+  <h3>
+    <span>
+      {{ book.title }} <br>
+      {{ book.author }} <br>
+      {{ book.genre }} <br>
+      {{ book.desc }} <br>
+      ${{ book.price }} <br>
+    </span>
+    <button (click)="deleteBook(book.id)">Delete</button>
+  </h3>
+} @empty {
+  <p>No books available</p>
+}
+</div>
+
+<router-outlet />
